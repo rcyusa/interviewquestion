@@ -1,0 +1,58 @@
+<div class="container">
+  <div [hidden]="userUpdated">
+    <h3 style="margin-top: 30px;">Update User Information <span style="font-size:small">* is a required field</span></h3>
+
+    <form (ngSubmit)="onSubmit()">
+
+      <mat-grid-list cols="4" rowHeight="20px">
+        <mat-grid-tile [colspan]="2" [rowspan]="3">
+          <mat-form-field>
+            <input matInput id="username" type="text" required [(ngModel)]="user.username" name="username" placeholder="username">
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <mat-grid-list cols="4" rowHeight="20px">
+        <mat-grid-tile [colspan]="2" [rowspan]="3">
+          <mat-form-field>
+            <input matInput id="firstName" type="text" required [(ngModel)]="user.firstName" name="firstName" placeholder="firstName">
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <mat-grid-list cols="4" rowHeight="20px">
+        <mat-grid-tile [colspan]="2" [rowspan]="3">
+          <mat-form-field>
+            <input matInput id="lastName" type="text" required [(ngModel)]="user.lastName" name="lastName" placeholder="lastName">
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <mat-grid-list cols="4" rowHeight="20px">
+        <mat-grid-tile [colspan]="2" [rowspan]="3">
+          <mat-form-field>
+            <input matInput id="email" type="text" required [(ngModel)]="user.email" name="email" placeholder="email">
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <mat-grid-list cols="4" rowHeight="20px">
+        <mat-grid-tile [colspan]="2" [rowspan]="3">
+          <mat-form-field>
+            <input matInput id="phone" type="text" required [(ngModel)]="user.phone" name="phone" placeholder="phone">
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+
+
+      <mat-grid-list cols="20" rowHeight="60px">
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+          <button class="mat-primary" mat-raised-button type="submit">Update User</button>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+          <a class="mat-warn" mat-raised-button routerLink="/">Cancel</a>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </form>
+  </div>
+  <div class="row" [hidden]="!userUpdated"
+  >
+    <h3>User updated successfully!</h3>
+  </div>
+</div>

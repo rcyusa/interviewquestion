@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="table-responsive" style="margin-top: 30px;">
+    <table id="bookListTable" class="table bordered highlight">
+      <thead>
+      <tr>
+        <th>venue</th>
+        <th>location</th>
+        <th>status</th>
+        <th>home team</th>
+        <th>away team</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor = "let matche of matcheList">
+        <td>{{matche.venue}}</td>
+        <td>{{matche.location}}</td>
+        <td>{{matche.status}}</td>
+        <td>{{matche.home_team.home_team_country}}</td>
+        <td>{{matche.away_team.away_team_country}}</td>
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

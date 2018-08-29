@@ -1,0 +1,6 @@
+http://localhost:8181/app/teams/RUS/matches
+
+result :2
+
+That mean you want to know the number of match played by Russia
+and the result is 2

@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="table-responsive" style="margin-top: 30px;">
+    <table id="bookListTable" class="table bordered highlight">
+      <thead>
+      <tr>
+        <th>username</th>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>email</th>
+        <th>phone</th>
+        <th>Operation</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor = "let user of userList">
+        <td><a (click)="onSelect(user)" style="cursor:pointer">{{user.username}}</a></td>
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.phone}}</td>
+
+        <td>
+          <input hidden="hidden" name="id" />
+          <button mat-button (click)="openDialog(user)" value="delete"><span class="fa fa-times"></span> delete</button>
+          <button mat-button (click)="onSelect(user)" value="delete"><span class="fa fa-edit"></span> update</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
