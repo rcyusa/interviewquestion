@@ -9,7 +9,7 @@ export class GetSortedTeamService {
   }
 
   getTeamList() {
-    let url = 'http://localhost:8181/teams/list';
+    let url = 'http://localhost:8181/app/teams/list';
     let headers = new Headers({
       'Content-Type': 'application/json',
       'x-auth-token': localStorage.getItem('xAuthToken')
